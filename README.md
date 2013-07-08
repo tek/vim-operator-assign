@@ -1,7 +1,8 @@
 vim-operator-assign
 ===============
 
-[![Build Status](https://travis-ci.org/tek/vim-operator-assign.png)](https://travis-ci.org/tek/vim-operator-assign)
+[![Build Status](https://travis-ci.org/tek/vim-operator-assign.png)]
+(https://travis-ci.org/tek/vim-operator-assign)
 
 ## Usage
 
@@ -13,7 +14,9 @@ assigned to that variable.
 
 ## Customization
 
-Define `operator#assign#ft#{&filetype}#format` to override the assignment's
-formatting.
+Define `operator#assign#ft#{&filetype}#format_assignment` to override the
+assignment's formatting,
+`operator#assign#ft#{&filetype}#format_variable_insert` for the variable
+replacing the selection.
 
 `b:operator_assign_filetype` Use a different filetype for the current buffer.
