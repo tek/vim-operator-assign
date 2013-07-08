@@ -1,6 +1,8 @@
 vim-operator-assign
 ===============
 
+[![Build Status](https://travis-ci.org/tek/vim-operator-assign.png)](https://travis-ci.org/tek/vim-operator-assign)
+
 ## Usage
 
 `map {lhs} <Plug>(operator-assign)`
