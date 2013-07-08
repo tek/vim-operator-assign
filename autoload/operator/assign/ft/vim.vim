@@ -1,3 +1,3 @@
-function! operator#assign#ft#vim#format(name, value) "{{{
+function! operator#assign#ft#vim#format_assignment(name, value) "{{{
   return 'let '.a:name .' = '.a:value
 endfunction "}}}
