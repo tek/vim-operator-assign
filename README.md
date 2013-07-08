@@ -8,9 +8,23 @@ vim-operator-assign
 
 `map {lhs} <Plug>(operator-assign)`
 
-This prompts the user to enter a variable name. The text covered by the motion
-is then replaced by that variable. In the line above, the replaced text is
-assigned to that variable.
+This operator replaces the selected text by a variable name, for which the user
+is queried using `input()`. In the line above, the replaced code is assigned to
+that variable.
+
+## Example
+
+Given the following code:
+
+`call func(str . 'foo')`
+
+When invoking `{lhs}ib` with the cursor inside the parentheses and entering
+`bar` at the prompt, the result is:
+
+```
+let bar = str . 'foo'
+call func(bar)
+```
 
 ## Customization
 
