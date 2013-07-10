@@ -29,13 +29,22 @@ function! s:format_variable_insert(name) "{{{
   endif
 endfunction "}}}
 
+function! s:indent_assignment(assignment) "{{{
+  let formatter = 'operator#assign#ft#'.s:filetype().'#indent_assignment'
+  if exists('*'.formatter)
+    return call(formatter, [a:assignment])
+  else
+    return repeat(' ', indent('.')) . a:assignment
+  endif
+endfunction "}}}
+
 function! operator#assign#do(motion_wise) abort "{{{
   exe 'runtime autoload/operator/assign/ft/'.s:filetype().'.vim'
   let value = s:selection(a:motion_wise)
   let name = input('variable name: ')
   let replacement = s:format_variable_insert(name)
   let assignment = s:format_assignment(name, value)
+  let assignment = s:indent_assignment(assignment)
   normal! gv"=replacementp
   put! =assignment
-  - normal! ==
 endfunction "}}}

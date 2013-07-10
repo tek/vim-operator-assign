@@ -31,6 +31,8 @@ call func(bar)
 Define `operator#assign#ft#{&filetype}#format_assignment` to override the
 assignment's formatting,
 `operator#assign#ft#{&filetype}#format_variable_insert` for the variable
-replacing the selection.
+replacing the selection and
+`operator#assign#ft#{&filetype}#indent_assignment` to control the new line's
+indent.
 
 `b:operator_assign_filetype` Use a different filetype for the current buffer.
